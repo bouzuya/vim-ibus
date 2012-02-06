@@ -1,5 +1,8 @@
 scriptencoding utf-8
 
+let s:save_cpoptions = &cpoptions
+set cpoptions&vim
+
 if !has('python')
   finish
 endif
@@ -62,4 +65,7 @@ else:
     ic.enable()
 EOT
 endfunction
+
+let &cpoptions = s:save_cpoptions
+unlet s:save_cpoptions
 
