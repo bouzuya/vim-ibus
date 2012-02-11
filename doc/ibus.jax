@@ -1,4 +1,4 @@
-*ibus.txt*	VimからiBusを操作するためのインタフェース
+*ibus.txt*	VimからIBusを操作するためのインタフェース
 
 目次						*ibus-contents*
 
@@ -10,7 +10,7 @@
 ==============================================================================
 概要						*ibus-introduction*
 
-*ibus* はVimからiBusを操作するためのインタフェースである。
+*ibus* はVimからIBusを操作するためのインタフェースである。
 
 内部的にPythonインタフェースを使用するため、Vimが|+python|でコンパイルされてい
 る必要がある。
@@ -20,15 +20,15 @@
 
 必要に応じて各関数を呼び出す。キーマッピングしておくと良い。以下に例を示す。
 
-挿入モードで <C-j> でiBusの有効無効を切り替える例
+挿入モードで <C-j> でIBusの有効無効を切り替える例
 >
 	inoremap <silent> <C-j> <C-\><C-o>:<C-u>call ibus#toggle()<CR>
 <
-挿入モードから <Esc> で抜ける際にiBusを無効にする例
+挿入モードから <Esc> で抜ける際にIBusを無効にする例
 >
 	inoremap <silent> <Esc> <Esc>:<C-u>call ibus#disable()<CR>
 <
-ステータスラインにiBusの状態を表示する例
+ステータスラインにIBusの状態を表示する例
 >
 	set statusline=[%{ibus#is_enabled()?'あ':'aA']
 <
@@ -40,17 +40,17 @@
 関数						*ibus-functions*
 
 ibus#is_enabled()				*ibus#is_enabled()*
-			iBusが有効かを取得する。iBusが有効なら1、有効でなけれ
+			IBusが有効かを取得する。IBusが有効なら1、有効でなけれ
 			ば0を返す。
 
 ibus#enable()					*ibus#enable()*
-			iBusを有効にする。
+			IBusを有効にする。
 
 ibus#disable()					*ibus#disable()*
-			iBusを無効にする。
+			IBusを無効にする。
 
 ibus#toggle()					*ibus#toggle()*
-			iBusの有効・無効を切り替える。
+			IBusの有効・無効を切り替える。
 
 ==============================================================================
 vim:tw=78:ts=8:ft=help:norl:fen:fdl=0:
