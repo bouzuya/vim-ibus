@@ -26,9 +26,9 @@ import vim
 import ibus
 bus = ibus.Bus()
 ic = ibus.InputContext(bus, bus.current_input_contxt())
-vim.command('let l:ime_is_enabled = ' + str(ic.is_enabled()))
+vim.command('let ibus_is_enabled = ' + str(ic.is_enabled()))
 EOT
-  return l:ime_is_enabled
+  return ibus_is_enabled
 endfunction
 
 function! s:enable()
