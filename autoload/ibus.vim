@@ -71,7 +71,7 @@ try:
     ic = ibus.InputContext(bus, bus.current_input_contxt())
     if ic.is_enabled():
         ic.disable()
-except:
+except DBusException:
     pass
 EOT
   return ''
