@@ -1,6 +1,8 @@
 ibus.vim
 ==========
 
+**This plugin is no longer maintained.**
+
 [IBus][ibus] interface for Vim.
 
 Requirements
